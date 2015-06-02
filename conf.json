@@ -5,5 +5,7 @@
 "fleetAPIVersion": "v1",
 "fleetAPIPort": "10001",
 "etcdAPIVersion": "v2",
-"etcdClientPort": "4001"
+"etcdClientPort": "4001",
+"dnsServerIP": "10.0.0.10",
+"dnsDomain": "cluster.local"
 }

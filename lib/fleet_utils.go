@@ -178,6 +178,8 @@ func createMinionUnits(masterFleetMachine,
 	kubelet = strings.Replace(kubelet, "<ID>", fleetMachine.ID, -1)
 	kubelet = strings.Replace(kubelet, "<IP_ADDR>", fleetMachine.PublicIP, -1)
 	kubelet = strings.Replace(kubelet, "<MASTER_IP_PORT>", masterIPPort, -1)
+	kubelet = strings.Replace(kubelet, "<DNS_SERVER_IP>", Conf.DNSServerIP, -1)
+	kubelet = strings.Replace(kubelet, "<DNS_DOMAIN>", Conf.DNSDomain, -1)
 
 	// Write kubelet service file
 	filename = strings.Replace(files["kubelet"], "@", "@"+fleetMachine.ID, -1)
